@@ -795,10 +795,11 @@ class UpSet:
         max_total = self.totals.max()
         if self._horizontal:
             orig_ax.set_xlim(max_total, 0)
-        for x in ['top', 'left', 'right']:
+        for x in ['top', 'left', 'bottom', 'right']:
             ax.spines[self._reorient(x)].set_visible(False)
         ax.yaxis.set_visible(False)
-        ax.xaxis.grid(True)
+        ax.xaxis.set_visible(False)
+        ax.xaxis.grid(False)
         ax.yaxis.grid(False)
         ax.patch.set_visible(False)
 
