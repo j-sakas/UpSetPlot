@@ -401,7 +401,7 @@ class UpSet:
         self._label_sizes(ax, rects, 'top' if self._horizontal else 'right')
 
         ax.xaxis.set_visible(False)
-        for x in ['top', 'bottom', 'right']:
+        for x in ['top', 'right']:
             ax.spines[self._reorient(x)].set_visible(False)
 
         tick_axis = ax.yaxis
@@ -554,7 +554,7 @@ class UpSet:
             ax.set_ylabel('')
 
         ax.xaxis.set_visible(False)
-        for x in ['top', 'bottom', 'right']:
+        for x in ['top',  'right']:
             ax.spines[self._reorient(x)].set_visible(False)
 
         tick_axis = ax.yaxis
